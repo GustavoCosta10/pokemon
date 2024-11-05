@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação de Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        h1 {
+            color: #FFCB05;
+            text-shadow: -3px 0 #3161A9, 0 2px #3161A9, 2px 0 #3161A9, 0 -1px #3161A9;
+        }
+
+        body {
+            background-image: url('fundo1.jpg');
+            background-repeat: no-repeat;
+            background-size: 55%;
+            background-color: black;
+        }
+
+        .pokemon-button,
+        #nextButton,
+        #resetButton {
+            background-color: #DD211F;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .pokemon-button:hover {
+            background-color: #45a049;
+            /* Cor quando o mouse passa por cima */
+        }
+
+        #result {
+            font-size: 40px;
+        }
+
+        #pontuacao {
+            font-size: 40px;
+            margin-top: 20px;
+            color: #FFCB05;
+            text-shadow: -1px 0 #3161A9, 0 1px #3161A9, 1px 0 #3161A9, 0 -1px #3161A9;
+        }
+
+    </style>
+</head>
+
+<body>
+    <audio src="quem-e-esse-pokemon-011.mp3" autoplay loop></audio> 
+    <h1>Quem é esse pokemon?</h1>
+    <div id="pontuacao">
+        Pontuação: <span id="scoreDisplay">0</span>
+    </div>
+    
+    <div id="pokemonContainer">
+        <img id="pokemonImage" alt="Imagem do Pokémon" style="display: none; width: 300px;">
+    </div>
+    <div id="options"></div>
+    <div id="result"></div>
+   
+    <button id="nextButton" style="display:none;">Próximo</button>
+    <button id="resetButton">Zerar Pontuação</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
